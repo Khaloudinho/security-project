@@ -1,38 +1,71 @@
-# Synchonisation unidirectionnelle avec rsync
+rsync example
+========
 
-## Rsync 
-rsync propose 2 solutions pour réaliser la synchronization unidirectionnelle
-1. via le daemon rsync
-2. via ssh 
+rsync example will show you how to synchronize 
+your a local directory and a remote directory
 
-Nous avons utilisé la 2 ème solution
+Look how easy it is to use:
 
-Rsync est intelligent et évite l'envoi d'élements déjà traités et identiques.
-## Utilisation
-
-### 1 - Avoir un accès via ssh
-Tout d'abord assurez-vous d'avoir une clef ssh en place.
-
-### 2 - Modifier le script
-Vous devez modifier le script en modifiant
-1. le dossier source `storagedatafromserver/` doit correspondre à `votre dossier source` ()de préférence éviter les urls relatives)
-2. l'user du serveur `root` doit correspondre à `votre user`
-3. l'ip du serveur `92.222.86.67` doit correspondre à `votre ip` 
-
-### 3 - Exemple
-
-Pour rsynchroniser les données de votre machine à votre serveur
 ```bash
-    # Cote machine
     bash curler.sh
 ```
-Pour monitorer sur votre serveur les changements (optionnel)
-```bash
-    # Cote serveur
-    # cd chemin-vers-dossier-cible 
-    bash monitor.sh 
-```
-Remarque :
-* vous pouvez utiliser des paramètres pour rendre plus flexible le script
-* vous pouvez rendre le script autoconfigurable à la première installation etc.
+
+Features
+--------
+
+- synchronize data from a local directory to a remote directory
+
+Installation
+------------
+# Unidirectional synchronization with rsync
+
+## Rsync
+rsync offers 2 solutions to achieve unidirectional synchronization
+1. via the rsync daemon
+2. via ssh
+
+We used the 2nd solution
+
+Rsync is avoid to send elements which has been already treated and identical.
+## Use
+
+### 1 - Have access via ssh
+First make sure you have an ssh key set up (with your server).
+
+### 2 - Edit the script
+You have to modify the script by modifying
+1. the source folder `storagedatafromserver /` must be your `source folder` (preferably avoid relative urls)
+2. the `root` user to your user`
+3. The server's ip `92.222.86.67` which has to be your ip`
+
+### 3 - Example
+
+To synchronize data from your machine to your server
+`` `Bash
+    # Machine rating
+    bash curler.sh
+`` `
+To monitor changes on your server (optional)
+`` `Bash
+    # cd path-to-target-folder
+    bash monitor.sh
+`` `
+Note :
+* you can use parameters to make the script more flexible
+* you can make the script autoconfigurable for the first installation etc.
+
+Contribute
+----------
+
+- Source Code: https://github.com/Khaloudinho/security-project/
+
+Support
+-------
+
+If you are having issues, please let us know at: guillaume.bertrandpr@yahoo.fr
+
+License
+-------
+
+The project is licensed under the MIT license.
 
