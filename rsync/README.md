@@ -41,15 +41,15 @@ You have to modify the script by modifying
 ### 3 - Example
 
 To synchronize data from your machine to your server
-`` `Bash
+```Bash
     # Machine rating
     bash curler.sh
-`` `
+```
 To monitor changes on your server (optional)
-`` `Bash
+```Bash
     # cd path-to-target-folder
     bash monitor.sh
-`` `
+```
 Note :
 * you can use parameters to make the script more flexible
 * you can make the script autoconfigurable for the first installation etc.
